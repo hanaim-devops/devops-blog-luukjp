@@ -11,25 +11,31 @@ In de DevOps wereld zijn er heel veel CI/CD-oplossingen[^1]. Een aantal waar je 
 
 ## Wat is Tekton?
 
-Tekton begon ooit binnen Google als onderdeel van het Knative-project[^2], een open-source initiatief voor serverless computing. Voor sommigen is de afhankelijkheid van Google reden tot zorg, gezien Google's reputatie om open-source projecten abrupt te stoppen. Gelukkig heeft Google – de vriendelijke multinational die het is – ons allemaal verrast met hun ongekende vrijgevigheid door Tekton in 2019 te doneren aan de Continuous Delivery Foundation. Dit gaf Tekton een toekomst binnen een gemeenschap, waar het open-source principe voorop blijft staan. https://opensource.googleblog.com/2020/05/the-tekton-pipelines-beta-release.html#:~:text=While%20initially%20starting%20as%20part,(CDF)%20in%20early%202019.
+Tekton begon ooit binnen Google als onderdeel van het Knative-project[^2], een open-source initiatief voor serverless computing. Voor sommigen is de afhankelijkheid van Google reden tot zorg, gezien Google's reputatie om open-source projecten abrupt te stoppen. Gelukkig heeft Google – de vriendelijke multinational die het is – ons allemaal verrast met hun ongekende vrijgevigheid door Tekton in 2019 te doneren aan de Continuous Delivery Foundation. Dit gaf Tekton een toekomst binnen een gemeenschap, waar het open-source principe voorop blijft staan.
 
 Maar wat maakt Tekton nu eigenlijk zo bijzonder? Tekton is een open-source Kubernetes-native CI/CD-framework, dit houd in dat het is ontworpen om rechtstreeks te werken met Kubernetes API's en objecten. Dit betekent dat de CI/CD-configuraties (zoals pipelines en tasks) worden beheerd als Kubernetes resources, waardoor ze op dezelfde manier kunnen worden beheerd als andere Kubernetes onderdelen.
 
-Het onderscheidende kenmerk van Tekton vergeleken met andere CI/CD tools is de modulaire en schaalbare architectuur. CI/CD-pipelines in Tekton worden opgebouwd uit afzonderlijke tasks en steps, waarbij elke step in een eigen container wordt uitgevoerd. Dit zorgt voor flexibiliteit en herbruikbaarheid, aangezien pipelines gemakkelijk kunnen worden aangepast en uitgebreid. https://8grams.medium.com/tekton-the-open-source-kubernetes-native-ci-cd-tools-55c49db53234
+Het onderscheidende kenmerk van Tekton vergeleken met andere CI/CD tools is de modulaire en schaalbare architectuur. CI/CD-pipelines in Tekton worden opgebouwd uit afzonderlijke tasks en steps, waarbij elke step in een eigen container wordt uitgevoerd. Dit zorgt voor flexibiliteit en herbruikbaarheid, aangezien pipelines gemakkelijk kunnen worden aangepast en uitgebreid.
 
-**foto toevoegen**
+<figure align="left">
+    <img src="plaatjes/0_OLsFQbLyhsYUQ9DQ.webp" alt="Tekton" width="500">
+    <figcaption>Figuur 1: Tekton</figcaption>
+</figure>
 
 ## Vergelijking met Andere CI/CD Tools
 
 Zoals eerder vermeld zijn er verschillende CI/CD-oplossingen beschikbaar, maar Tekton onderscheidt zich van tools zoals Jenkins, GitHub Actions en Gitlab CI/CD door zijn diepe integratie met Kubernetes en modulariteit. Laten we een aantal verschillen bekijken:
 
-- **Jenkins**: Hoewel Jenkins voor velen al een vertrouwde naam is, is het oorspronkelijk niet ontworpen voor cloud-native[^3] omgevingen. Dit betekent dat het zonder plugins (lang leve het beheren van duizend plugins) beperkingen kent. Hierdoor kunnen er uitdagingen ontstaan bij het schalen van Jenkins binnen Kubernetes en bij de configuratie. https://medium.com/@rajaravivarman/jenkins-vs-tekton-choosing-the-right-ci-cd-tool-for-your-devops-pipeline-727aa2329ca5
-- **GitHub Actions**: GitHub Actions biedt een geïntegreerde CI/CD-oplossing binnen het GitHub-ecosysteem, ideaal voor projecten die volledig binnen GitHub werken, zoals kleine tot middelgrote projecten. De YAML-configuratie maakt het opzetten van workflows eenvoudig, en de vele kant-en-klare acties versnellen de ontwikkeling. GitHub Actions maakt het gemakkelijk om snelle en simpele workflows te creëren zonder veel opzet. Echter, het schalen van workflows is afhankelijk van de GitHub-infrastructuur, waardoor het minder geschikt is voor zeer intensieve taken (zoals het compileren van Chromium). https://www.stakater.com/post/github-actions-vs-bitbucket-pipelines-vs-gitlab-ci-vs-tekton-bestcicdtool
-- **GitLab CI/CD**: Integreert naadloos met GitLab en biedt uitgebreide ondersteuning voor DevOps-taken. Hoewel het goed werkt met Docker en Kubernetes, vereist het meer handmatige configuraties voor Kubernetes-specifieke integraties vergeleken met Tekton, dat juist volledig op Kubernetes is gericht. https://www.stakater.com/post/github-actions-vs-bitbucket-pipelines-vs-gitlab-ci-vs-tekton-bestcicdtool
+- **Jenkins**: Hoewel Jenkins voor velen al een vertrouwde naam is, is het oorspronkelijk niet ontworpen voor cloud-native[^3] omgevingen. Dit betekent dat het zonder plugins (lang leve het beheren van duizend plugins) beperkingen kent. Hierdoor kunnen er uitdagingen ontstaan bij het schalen van Jenkins binnen Kubernetes en bij de configuratie.
+- **GitHub Actions**: GitHub Actions biedt een geïntegreerde CI/CD-oplossing binnen het GitHub-ecosysteem, ideaal voor projecten die volledig binnen GitHub werken, zoals kleine tot middelgrote projecten. De YAML-configuratie maakt het opzetten van workflows eenvoudig, en de vele kant-en-klare acties versnellen de ontwikkeling. GitHub Actions maakt het gemakkelijk om snelle en simpele workflows te creëren zonder veel opzet. Echter, het schalen van workflows is afhankelijk van de GitHub-infrastructuur, waardoor het minder geschikt is voor zeer intensieve taken (zoals het compileren van Chromium).
+- **GitLab CI/CD**: Integreert naadloos met GitLab en biedt uitgebreide ondersteuning voor DevOps-taken. Hoewel het goed werkt met Docker en Kubernetes, vereist het meer handmatige configuraties voor Kubernetes-specifieke integraties vergeleken met Tekton, dat juist volledig op Kubernetes is gericht.
 
 In tegenstelling tot Tekton hebben Jenkins, GitHub Actions en GitLab CI/CD weliswaar mogelijkheden voor het hergebruiken van stappen of scripts, maar ze bieden minder gestructureerde manieren om herbruikbare en modulaire workflows te creëren. Bij deze tools zijn teams vaak afhankelijk van handmatig beheer van scripts, configuratiebestanden of het kopiëren van gedeelde templates, wat leidt tot code duplicatie en moeilijker te onderhouden pipelines.
 
-**foto https://8grams.medium.com/tekton-the-open-source-kubernetes-native-ci-cd-tools-55c49db53234**
+<figure align="left">
+    <img src="plaatjes/1_EUdRHH9A_E9gxNnkX8Qmdg.webp" alt="Vergelijking met Andere CI/CD Tools" width="500">
+    <figcaption>Figuur 2: Vergelijking met Andere CI/CD Tools</figcaption>
+</figure>
 
 ## De Impact van Tekton op Samenwerking binnen 'Enterprise' Teams
 
