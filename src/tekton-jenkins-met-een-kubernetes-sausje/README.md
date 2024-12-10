@@ -34,7 +34,7 @@ In tegenstelling tot Tekton hebben Jenkins, GitHub Actions en GitLab CI/CD welis
 
 <figure align="left">
     <img src="plaatjes/1_EUdRHH9A_E9gxNnkX8Qmdg.webp" alt="Vergelijking met Andere CI/CD Tools" width="500">
-    <figcaption>Figuur 2: Vergelijking met Andere CI/CD Tools</figcaption>
+    <figcaption>*Figuur 2*: Vergelijking met Andere CI/CD Tools</figcaption>
 </figure>
 
 ## De Impact van Tekton op Samenwerking binnen 'Enterprise' Teams
@@ -142,21 +142,13 @@ Toch is Tekton niet de perfecte oplossing voor alles. De leercurve en de complex
 ## Bronnen
 
 1. Tekton. (2024). *Welcome to Tekton*. Geraadpleegd op 10 oktober 2024, van [https://tekton.dev/](https://tekton.dev/).
-
 2. GitHub Docs. (2024). *Understanding GitHub Actions*. Geraadpleegd op 10 oktober 2024, van [https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions).
-
 3. Agnihotri, S. (2024). *Tekton - A Kubernetes-native CI/CD: Day 46 of 50 days DevOps Tools Series*. Geraadpleegd op 10 oktober 2024, van [https://dev.to/shivam_agnihotri/tekton-a-kubernetes-native-cicd-day-46-of-50-days-devops-tools-series-3e9g](https://dev.to/shivam_agnihotri/tekton-a-kubernetes-native-cicd-day-46-of-50-days-devops-tools-series-3e9g).
-
 4. IBM Cloud. (2024). *Learn how to use Tekton pipelines in your CI/CD pipelines in the IBM Cloud*. Geraadpleegd op 10 oktober 2024, van [https://www.ibm.com/blog/tekton-in-the-ibm-cloud-part-1/](https://www.ibm.com/blog/tekton-in-the-ibm-cloud-part-1/).
-
 5. Ebert, D. (2020). *Tekton on IBM Cloud Level 1: Hello World (Part 1)*. Geraadpleegd op 10 oktober 2024, van [https://medium.com/@dannyeb/tekton-on-ibm-cloud-level-1-hello-world-part-1-6a7800e9f2d4](https://medium.com/@dannyeb/tekton-on-ibm-cloud-level-1-hello-world-part-1-6a7800e9f2d4).
-
 6. Chaudhary, D. (2020). *Building CI/CD systems using Tekton*. Geraadpleegd op 10 oktober 2024, van [https://medium.com/@dipendra.chaudhary/building-ci-cd-systems-using-tekton-3075a8a60292](https://medium.com/@dipendra.chaudhary/building-ci-cd-systems-using-tekton-3075a8a60292).
-
 7. 8 Grams. (2020). *Tekton: The open-source Kubernetes-native CI/CD tools*. Geraadpleegd op 10 oktober 2024, van [https://8grams.medium.com/tekton-the-open-source-kubernetes-native-ci-cd-tools-55c49db53234](https://8grams.medium.com/tekton-the-open-source-kubernetes-native-ci-cd-tools-55c49db53234).
-
 8. Google Open Source Blog. (2020). *The Tekton Pipelines Beta release*. Geraadpleegd op 10 oktober 2024, van [https://opensource.googleblog.com/2020/05/the-tekton-pipelines-beta-release.html](https://opensource.googleblog.com/2020/05/the-tekton-pipelines-beta-release.html).
-
 ---
 
 [^1]:[CI/CD-oplossingen] (#ci-cd-oplossingen) CI/CD-oplossingen automatiseren het softwareontwikkelingsproces door Continuous Integration (CI) en Continuous Delivery/Deployment (CD).
